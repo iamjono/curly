@@ -194,11 +194,6 @@ public struct HttpClient {
 
 		// Set the content type
 		HttpClient.contentType(encoding, curlObject)
-		//		if encoding == "json" {
-		//			curlObject.addHeader(.contentType, value: "application/json")
-		//		} else {
-		//			curlObject.addHeader(.contentType, value: "application/x-www-form-urlencoded")
-		//		}
 
 		do {
 			let response = try curlObject.perform()
@@ -273,11 +268,6 @@ public struct HttpClient {
 
 		// Set the content type
 		HttpClient.contentType(encoding, curlObject)
-		//		if encoding == "json" {
-		//			curlObject.addHeader(.contentType, value: "application/json")
-		//		} else {
-		//			curlObject.addHeader(.contentType, value: "application/x-www-form-urlencoded")
-		//		}
 
 		do {
 			let response = try curlObject.perform()
@@ -314,14 +304,13 @@ public struct HttpClient {
 		}
 		return str
 	}
-	private static func contentType(_ encoding: String, _ curlObject: CURLRequest) -> CURLRequest {
+	private static func contentType(_ encoding: String, _ curlObject: CURLRequest) {
 		if encoding == "json" {
 			curlObject.addHeader(.contentType, value: "application/json")
 		} else if encoding == "none" {
-			return curlObject
+			return
 		} else {
 			curlObject.addHeader(.contentType, value: "application/x-www-form-urlencoded")
 		}
-		return curlObject
 	}
 }
