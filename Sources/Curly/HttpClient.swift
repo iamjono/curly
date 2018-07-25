@@ -288,10 +288,6 @@ public struct HttpClient {
 				return model
 			}
 
-		} catch let error as CURLResponse.Error {
-			let e = try error.response.bodyJSON(errorType)
-			throw e
-
 		} catch {
 			throw error
 		}
