@@ -11,9 +11,9 @@ let package = Package(
             targets: ["Curly"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/PerfectlySoft/Perfect-HTTP.git", from: "3.0.0"),
-        .package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", from: "4.0.0"),
-        .package(url: "https://github.com/PerfectlySoft/Perfect-Logger.git", from: "3.0.0")
+        .package(url: "https://github.com/PerfectlySoft/Perfect-HTTP.git", from: "3.0.20"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-CURL.git", from: "4.0.1"),
+        .package(url: "https://github.com/PerfectlySoft/Perfect-Logger.git", from: "3.2.0")
     ],
     targets: [
         .target(
